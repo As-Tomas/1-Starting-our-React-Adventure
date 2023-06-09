@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+
 import useFetch from './components/restDataService/useFetch';
-import './App.css'
+//import './App.css'
 
 const url = 'https://api.realworld.io/api//articles/If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863';
 
@@ -13,13 +13,13 @@ function App() {
 
   return (
     <>
-      <div>
+      <div >
       <div className="App">
       <h1>
         Something
       </h1>
 
-      <div>{data?.article.title}</div>
+      <div className="bg-slate-500">{data?.article.title}</div>
 
       <button onClick={refetch}> Refetch</button>
     </div>
