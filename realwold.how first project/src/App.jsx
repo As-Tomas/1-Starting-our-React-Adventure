@@ -1,28 +1,22 @@
 
-import useFetch from './components/restDataService/useFetch';
+import Content from './components/Content/Content';
+import ContentList from './components/Content/ContentList';
+import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 //import './App.css'
 
-const url = 'https://api.realworld.io/api//articles/If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863';
 
 function App() {
-  const { data, loading, error, refetch} = useFetch(url); 
-
-  if (loading) return <h1> LOADING...</h1>;
-
-  if (error) console.log(error);
+  
 
   return (
     <>
       <div >
-      <div className="App">
-      <h1>
-        Something
-      </h1>
-
-      <div className="bg-slate-500">{data?.article.title}</div>
-
-      <button onClick={refetch}> Refetch</button>
-    </div>
+        <NavBar/>
+        <ContentList/>
+        <Content/>
+        <Footer/>
+      
       </div>
       
     </>
