@@ -1,6 +1,7 @@
 import useFetch from "../restDataService/useFetch";
 import avatar from "../../assets/demo-avatar.png";
 import hearth from "../../assets/hearth.png";
+import JustDate from "./Helpers/DateConverte";
 
 const url = "https://api.realworld.io/api//articles";
 
@@ -47,7 +48,7 @@ export const ContentList = () => {
                         {article.author.username}
                       </a>
                       <span className="text-gray-500 text-opacity-40">
-                        {article.createdAt}
+                      <JustDate dateTime={article.createdAt}/>
                         </span>
                     </div>
                   </div>
