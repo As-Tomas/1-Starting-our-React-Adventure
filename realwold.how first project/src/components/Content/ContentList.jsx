@@ -90,7 +90,7 @@ export const ContentList = () => {
         </div>
       </div>
 
-      <button onClick={refetch}> Refetch</button>
+      <button className="border rounded-lg px-4" onClick={refetch}> Refetch</button>
     </div>
   );
 };
