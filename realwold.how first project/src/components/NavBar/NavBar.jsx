@@ -1,4 +1,4 @@
-
+import {Link} from "react-router-dom"
 
 const NavBar = () => {
   return (
@@ -7,9 +7,12 @@ const NavBar = () => {
         <a href="#">conduit</a>
         <div>
           <ul className="flex flex-row gap-8 text-gray-400 text-lg ">
-            <li className="hover:text-gray-900 cursor-pointer">Home</li>
-            <li className="hover:text-gray-900 cursor-pointer" >Sing in</li>
-            <li className="hover:text-gray-900 cursor-pointer" >Sign up</li>
+            <li className="hover:text-gray-900 cursor-pointer">
+              <Link to="/home">Home</Link> </li>
+            <li className="hover:text-gray-900 cursor-pointer" >
+              <Link to="/signin">Sign in</Link> </li>
+            <li className="hover:text-gray-900 cursor-pointer" >
+              <Link to="/signup">Sign up</Link> </li>
           </ul>
         </div>
       </div>
