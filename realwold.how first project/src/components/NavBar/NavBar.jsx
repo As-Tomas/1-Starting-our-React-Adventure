@@ -8,11 +8,11 @@ export default function NavBar() {
         <div>
           <ul className="flex flex-row gap-8 text-gray-400 text-lg ">
             <li className="hover:text-gray-900 cursor-pointer">
-              <Link to="/">Home</Link> </li>
+              <CustomLink to="/1-Starting-our-React-Adventure/">Home</CustomLink> </li>
             <li className="hover:text-gray-900 cursor-pointer" >
-              <CustomLink to="/signin">Sign in</CustomLink> </li>
+              <CustomLink to="/1-Starting-our-React-Adventure/signin">Sign in</CustomLink> </li>
             <li className="hover:text-gray-900 cursor-pointer" >
-              <CustomLink to="/signup">Sign up</CustomLink> </li>
+              <CustomLink to="/1-Starting-our-React-Adventure/signup">Sign up</CustomLink> </li>
           </ul>
         </div>
       </div>

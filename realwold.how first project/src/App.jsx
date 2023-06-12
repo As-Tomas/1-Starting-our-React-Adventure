@@ -18,9 +18,9 @@ function App() {
       <NavBar />
       <div>
         <Routes>
-          <Route path="/" element={<ContentList />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/1-Starting-our-React-Adventure/" element={<ContentList />} />
+          <Route path="/1-Starting-our-React-Adventure/signin" element={<SignIn />} />
+          <Route path="/1-Starting-our-React-Adventure/signup" element={<SignUp />} />
         </Routes>
         <button className="border rounded-lg px-4" onClick={() => setIsOpen(true)}>Open Modal</button>
         <Footer />
