@@ -1,4 +1,4 @@
-import Content from "./components/Content/Content";
+//import Content from "./components/Content/Content";
 import ContentList from "./components/Content/ContentList";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
@@ -13,13 +13,12 @@ function App() {
 
   const [isOpen, setIsOpen] = useState(true)
 
-
   return (
     <>
       <NavBar />
       <div>
         <Routes>
-          <Route path="/home" element={<ContentList />} />
+          <Route path="/" element={<ContentList />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>

@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom"
+import {Link, useMatch, useResolvedPath} from "react-router-dom"
 
-const NavBar = () => {
+export default function NavBar() {
   return (
     <div className="mx-5 p-4">
         <div className="flex flex-row justify-between text-4xl font-bold text-green-500 " >
@@ -8,11 +8,11 @@ const NavBar = () => {
         <div>
           <ul className="flex flex-row gap-8 text-gray-400 text-lg ">
             <li className="hover:text-gray-900 cursor-pointer">
-              <Link to="/home">Home</Link> </li>
+              <Link to="/">Home</Link> </li>
             <li className="hover:text-gray-900 cursor-pointer" >
-              <Link to="/signin">Sign in</Link> </li>
+              <CustomLink to="/signin">Sign in</CustomLink> </li>
             <li className="hover:text-gray-900 cursor-pointer" >
-              <Link to="/signup">Sign up</Link> </li>
+              <CustomLink to="/signup">Sign up</CustomLink> </li>
           </ul>
         </div>
       </div>
@@ -20,4 +20,18 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+
+
+// eslint-disable-next-line react/prop-types
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to)
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
+  )
+}
